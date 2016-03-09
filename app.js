@@ -183,8 +183,6 @@ var eastRhymes = [
   "How ya like me now? I'm getting busier\nI'm double platinum, I'm watching you get dizzier.",
   "Dre beating on Dee from Pump It Up\nStep to the Dog and get fucked up."
 
-
-
 ];
 var player1;
 var player2;
