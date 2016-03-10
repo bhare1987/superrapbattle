@@ -163,7 +163,7 @@ var westRhymes = [
   "Used to be my homie, used to be my ace\nNow I wanna slap the taste out yo' mouth\nMake you bow down to the Row\nFuckin' me, now I'm fuckin' you, little hoe.",
   "I hope that your fans understand when you talk about sprayin' me\nThe same records that you makin' is payin' me.",
   "The symbol on my arm is off limits to challengers\nYou hold the rusty sword, I swing the Excalibur",
-  "Lookin' like straight bozo\n/I saw it comin', that's why I went solo.",
+  "Lookin' like straight bozo\nI saw it comin', that's why I went solo.",
   "Your reign on the top was short like leprechauns\nAs I crush so-called willies, thugs, and rapper-dons",
   "This goes out for those that choose to use\nDisrespectful views on the King of N.Y.\nFuck that, why try, throw bleach in your eye\nNow ya brailling it, snatch that light shit, I'm scaling it",
   "You can't handle the whole weight\nSkin needs lotion, teeth need Colgate\nWise up, you little burnt-up french fry\nI'm that type of guy."
@@ -174,7 +174,7 @@ var eastRhymes = [
   "What you know about being bullied over half your life\nOh that’s right, you should know what that’s like, you’re half white\nVanilla Ice, spill the beans and rice\nI’m eating you alive inside, Jesus Christ!",
   "You's a pop tart sweetheart, you soft in the middle\nI eat you for breakfast, the watch was exchanged for your necklace.",
   "I don't need your little fucking magazine. I got XXL's number anyways.... And y'all can't stand it 'cause they gettin' bigger than y'all",
-  "Em, you claim your mother's a crackhead and Kim is a known slut/So what's Hailie gonna be when she grows up?",
+  "Em, you claim your mother's a crackhead and Kim is a known slut\nSo what's Hailie gonna be when she grows up?",
   "And you can't spit, so you obviously must swallow.",
   "So pimpin' 'be easy' quit catching feelings, cause you worth a couple hundred grand and I'm worth millions\n No body's thinkin' bout you, plus your beef ain't legit, so please stay off the T-I-P on my d*ck.",
   "Mad at me 'cause I kick that shit real niggas feel\nWhile 99 percent of your fans wear high heels",
@@ -280,6 +280,7 @@ function Rapper(options){
   this.dissed = function(opponent){
     var random = Math.floor(Math.random() * 10);
     this.fortitude = this.fortitude - (opponent.arsenal.damage + opponent.fire);
+    console.log("Brutal! Your fortitude is: " + this.fortitude);
     if(this.fortitude < 1) {
       console.log("You got knocked the fuck out son!");
     }
@@ -313,7 +314,6 @@ function Place(options) {
                         }
                       });
   };
-
 }
 
 function startGame() {
