@@ -2,9 +2,36 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>SUPER RAP BATTLE!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen" title="no title" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Lobster|Play:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <title>SuperRapBattle!</title>
   </head>
   <body>
+    <div class="background-overlay"></div>
+    <header>
+      <h1>SuperRapBattle!</h1>
+    </header>
+    <section class="mainContainer">
+      <div class="characterSelect">
+
+      </div>
+      <div class="headliners hide">
+        <div class="opponent1"></div>
+        <div class="opponent2"></div>
+        <div class="location"></div>
+      </div>
+      <div class="battleground hide">
+        <div class="player1"></div>
+        <div class="textContainer"></div>
+        <div class="player2"></div>
+      </div>
+    </section>
+    <script src="bower_components/underscore/underscore-min.js" charset="utf-8"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="data.js" charset="utf-8"></script>
+    <script src="constructors.js" charset="utf-8"></script>
+    <script src="templates.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
   </body>
 </html>

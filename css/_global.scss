@@ -1,0 +1,49 @@
+* {
+  font-family: $bodyFont;
+}
+
+body {
+  width: 100%;
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position-x: -900px;
+  background-position-y: -300px;
+}
+
+.background-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(82,83,76,.25);
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+    font-family: $headerFont;
+    color: $headerFontColor;
+    width: 50%;
+  }
+}
+
+.mainContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.hide {
+  display: none !important;
+}
