@@ -8,8 +8,8 @@ var superRapBattle = {
   },
   events: function(){
     $('.characterSelect').on('click', '.character', superRapBattle.selectCharacter);
-    $('.characterSelect').on('click', '#clearCharacters', superRapBattle.clearCharacters);
-    $('.characterSelect').on('click', '#confirmCharacters', superRapBattle.dconfirmCharacters);
+    $('header').on('click', '#clearCharacters', superRapBattle.clearCharacters);
+    $('header').on('click', '#confirmCharacters', superRapBattle.confirmCharacters);
   },
   selectCharacter: function(event){
     if (!superRapBattle.player2) {
@@ -19,12 +19,13 @@ var superRapBattle = {
       } else if (superRapBattle.player1 && !$(this).hasClass('selectedOne')) {
         superRapBattle.player2 = $(this).data('character');
         $(this).addClass('selectedTwo');
-        $('.characterSelect').append(
+        $('header').append(
           '<div id="confirmContainer">' +
-            '<button id="clearCharacters"></button>' +
-            '<button id="confirmCharacters"></button>' +
+            '<button id="clearCharacters">Clear</button>' +
+            '<button id="confirmCharacters">Confirm!</button>' +
           '</div>'
         );
+        $(window).scrollTop(0);
       }
     }
   },
@@ -39,6 +40,7 @@ var superRapBattle = {
     event.preventDefault();
     $('.characterSelect').addClass('hide');
     $('.headliners').removeClass('hide');
+    $('#confirmContainer').remove();
   },
   config: {
     player1: undefined,
@@ -100,6 +102,6 @@ function startGame() {
   });
 }
 
-(function(){
+$(document).ready(function(){
   superRapBattle.init();
-})();
+})

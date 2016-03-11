@@ -24,10 +24,11 @@ body {
 /* line 24, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
 header {
   display: flex;
+  position: relative;
   justify-content: center;
   width: 100%;
   height: 150px; }
-  /* line 29, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
+  /* line 30, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
   header h1 {
     display: flex;
     justify-content: center;
@@ -39,12 +40,12 @@ header {
     color: #D3F819;
     width: 50%; }
 
-/* line 42, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
+/* line 43, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
 .mainContainer {
   width: 90%;
   margin: 0 auto; }
 
-/* line 47, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
+/* line 48, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
 .hide {
   display: none !important; }
 
@@ -104,3 +105,19 @@ header {
 /* line 55, /Users/brandon.hare/tiy/week6/superrapbattle/css/_characterSelect.scss */
 .selectedTwo {
   box-shadow: 0 0 20px 20px #F7199E; }
+
+/* line 59, /Users/brandon.hare/tiy/week6/superrapbattle/css/_characterSelect.scss */
+#confirmContainer {
+  position: absolute;
+  top: 60px; }
+  /* line 62, /Users/brandon.hare/tiy/week6/superrapbattle/css/_characterSelect.scss */
+  #confirmContainer button {
+    background-color: #8D9274;
+    border: 2px solid #52534C;
+    border-radius: 3px;
+    padding: 5px;
+    color: white; }
+
+/* line 71, /Users/brandon.hare/tiy/week6/superrapbattle/css/_characterSelect.scss */
+#clearCharacters {
+  margin-right: 15px; }
