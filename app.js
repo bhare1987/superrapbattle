@@ -12,12 +12,17 @@ var superRapBattle = {
     $('.characterSelect').on('click', '#confirmCharacters', superRapBattle.confirmCharacters);
   },
   selectCharacter: function(event){
+    var _this = $(this);
     if (!superRapBattle.player2) {
       if(!superRapBattle.player1){
-        superRapBattle.player1 = $(this).data('character');
+        superRapBattle.player1 = data.characters.filter(function(el){
+          return el.name === _this.data('character');
+        });
         $(this).addClass('selectedOne');
       } else if (superRapBattle.player1 && !$(this).hasClass('selectedOne')) {
-        superRapBattle.player2 = $(this).data('character');
+        superRapBattle.player2 = data.characters.filter(function(el){
+          return el.name === _this.data('character');
+        });
         $(this).addClass('selectedTwo');
         $('.characterSelect').append(
           '<div id="confirmContainer">' +
@@ -41,6 +46,7 @@ var superRapBattle = {
     $('.characterSelect').addClass('hide');
     $('.headliners').removeClass('hide');
     $('#confirmContainer').remove();
+    superRapBattle.addHeadlinersToDom();
   },
   config: {
     player1: undefined,
@@ -65,6 +71,20 @@ var superRapBattle = {
       output += superRapBattle.buildCharacters('character', el);
     });
     $(target).html(output);
+  },
+  selectLocation: function(){
+    var random = Math.floor(Math.random() * data.locations.length);
+    superRapBattle.battleground = new Place({
+      opponents: [superRapBattle.player1[0], superRapBattle.player2[0]],
+      name: data.locations[random],
+    });
+  },
+  addHeadlinersToDom: function(){
+    superRapBattle.selectLocation();
+    $('.opponent1').html(superRapBattle.buildTmpl('character', superRapBattle.player1[0]));
+    $('.opponent2').html(superRapBattle.buildTmpl('character', superRapBattle.player2[0]));
+    $('.locationContainer h2 span').html(superRapBattle.battleground.name);
+    // setTimeout(startGame, 15000);
   },
 }
 

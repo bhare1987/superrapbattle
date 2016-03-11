@@ -50,14 +50,13 @@ function Place(options){
   var options = options || {};
   this.opponents = options.opponents;
   this.name = options.name;
-  this.coast = Math.floor(Math.random() * 2) === 1 ? "East" : "West";
 };
 
 Place.prototype = {
   constructor: Place,
   advantage: function() {
     this.opponents.forEach(function(el){
-      if(el.coast === _this.coast){
+      if(el.hometown === _this.name){
         el.fire = el.fire * 2;
         el.fortitude = el.fortitude * 2;
       }
