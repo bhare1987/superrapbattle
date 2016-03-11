@@ -84,8 +84,16 @@ var superRapBattle = {
     $('.opponent1').html(superRapBattle.buildTmpl('character', superRapBattle.player1[0]));
     $('.opponent2').html(superRapBattle.buildTmpl('character', superRapBattle.player2[0]));
     $('.locationContainer h2 span').html(superRapBattle.battleground.name);
-    // setTimeout(startGame, 15000);
+    setTimeout(superRapBattle.startGame, 4000);
   },
+  startGame: function() {
+    $('.headliners').addClass('hide');
+    $('.battleground').removeClass('hide');
+    superRapBattle.pushTextToContainer("Welcome to the fight y'all! Today's contestants are: " + superRapBattle.player1[0].name + " and " + superRapBattle.player2[0].name + ".", '.textContainer');
+  },
+  pushTextToContainer: function(str, container){
+    $(container).append(str);
+  }
 }
 
 function startGame() {

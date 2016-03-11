@@ -1,0 +1,53 @@
+.headliners {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  & > span {
+    animation-delay: .5s;
+    display: flex;
+    font-family: $headerFont;
+    flex-basis: 16%;
+    margin: auto;
+    color: white;
+    font-size: 4em;
+    justify-content: center;
+  }
+}
+
+.opponent1 {
+  display: flex;
+  flex-basis: 40%;
+  animation-delay: .25s;
+  & > .character {
+    box-shadow: 0 0 20px 20px $brightGreen;
+    flex-basis: 100%;
+    &:hover {
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+}
+
+.opponent2 {
+  display: flex;
+  flex-basis: 40%;
+  animation-delay: .75s;
+  & > .character {
+    box-shadow: 0 0 20px 20px $pink;
+    flex-basis: 100%;
+    &:hover {
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+}
+
+.locationContainer {
+  margin-top: 20px;
+  animation-delay: 1s;
+  h2 {
+    margin-left: 0;
+    color: white;
+    font-size: 3em;
+  }
+}

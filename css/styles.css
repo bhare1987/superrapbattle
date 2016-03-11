@@ -125,3 +125,57 @@ header {
     border-radius: 3px;
     padding: 5px;
     color: white; }
+
+/* line 1, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+.headliners {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  /* line 5, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+  .headliners > span {
+    animation-delay: .5s;
+    display: flex;
+    font-family: "Lobster", sans-serif;
+    flex-basis: 16%;
+    margin: auto;
+    color: white;
+    font-size: 4em;
+    justify-content: center; }
+
+/* line 17, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+.opponent1 {
+  display: flex;
+  flex-basis: 40%;
+  animation-delay: .25s; }
+  /* line 21, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+  .opponent1 > .character {
+    box-shadow: 0 0 20px 20px #D3F819;
+    flex-basis: 100%; }
+    /* line 24, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+    .opponent1 > .character:hover {
+      background-color: transparent;
+      cursor: default; }
+
+/* line 31, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+.opponent2 {
+  display: flex;
+  flex-basis: 40%;
+  animation-delay: .75s; }
+  /* line 35, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+  .opponent2 > .character {
+    box-shadow: 0 0 20px 20px #F7199E;
+    flex-basis: 100%; }
+    /* line 38, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+    .opponent2 > .character:hover {
+      background-color: transparent;
+      cursor: default; }
+
+/* line 45, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+.locationContainer {
+  margin-top: 20px;
+  animation-delay: 1s; }
+  /* line 48, /Users/brandon.hare/tiy/week6/superrapbattle/css/_headliners.scss */
+  .locationContainer h2 {
+    margin-left: 0;
+    color: white;
+    font-size: 3em; }
