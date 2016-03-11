@@ -8,8 +8,8 @@ var superRapBattle = {
   },
   events: function(){
     $('.characterSelect').on('click', '.character', superRapBattle.selectCharacter);
-    $('header').on('click', '#clearCharacters', superRapBattle.clearCharacters);
-    $('header').on('click', '#confirmCharacters', superRapBattle.confirmCharacters);
+    $('.characterSelect').on('click', '#clearCharacters', superRapBattle.clearCharacters);
+    $('.characterSelect').on('click', '#confirmCharacters', superRapBattle.confirmCharacters);
   },
   selectCharacter: function(event){
     if (!superRapBattle.player2) {
@@ -19,13 +19,13 @@ var superRapBattle = {
       } else if (superRapBattle.player1 && !$(this).hasClass('selectedOne')) {
         superRapBattle.player2 = $(this).data('character');
         $(this).addClass('selectedTwo');
-        $('header').append(
+        $('.characterSelect').append(
           '<div id="confirmContainer">' +
             '<button id="clearCharacters">Clear</button>' +
             '<button id="confirmCharacters">Confirm!</button>' +
           '</div>'
         );
-        $(window).scrollTop(0);
+        window.scrollTo(0, document.body.scrollHeight);
       }
     }
   },
