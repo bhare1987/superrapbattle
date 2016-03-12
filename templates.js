@@ -10,6 +10,7 @@ var templates = {
         '<li><strong>Fire:</strong> <%=fire%></li>',
         '<li><strong>Flow:</strong> <%=flow%></li>',
         '<li><strong>Fortitude:</strong> <%=fortitude%></li>',
+        '<li><strong>Rally:</strong> <%=rally%></li>',
       '</ul>',
     '</div>',
   ].join(""),
@@ -17,6 +18,9 @@ var templates = {
     '<div class="text-item"><i class="fa fa-chevron-right"></i><%=content%></div>',
   ].join(''),
   gameButtons: [
-    '<div class="gameButtons"><button data="<%=name%>">Spit that Fire</button></div>'
+    '<div class="gameButtons">',
+      '<button name="spit" data-player="<%=player%>">Spit that Fire</button>',
+      '<button name="rally" data-player="<%=player%>">Rally!</button>',
+    '</div>'
   ].join("")
 }

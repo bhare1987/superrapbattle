@@ -11,7 +11,6 @@
   .character {
     flex-direction: column;
     flex-basis: 100%;
-    box-shadow: 0 0 20px 20px $brightGreen;
     height: 400px;
     background-color: rgba(0,0,0,.6);
     h2 {
@@ -28,7 +27,6 @@
       }
     }
     &:hover {
-      background-color: transparent;
       cursor: default;
     }
   }
@@ -41,7 +39,6 @@
   .character {
     flex-direction: column;
     flex-basis: 100%;
-    box-shadow: 0 0 20px 20px $pink;
     height: 400px;
     background-color: rgba(0,0,0,.6);
     h2 {
@@ -58,7 +55,6 @@
       }
     }
     &:hover {
-      background-color: transparent;
       cursor: default;
     }
   }
@@ -66,6 +62,7 @@
 
 .textContainer {
   display: flex;
+  flex-direction: column;
   flex-basis: 46%;
   background-color: $brown;
   border: 3px solid $gray;
@@ -86,8 +83,12 @@
   margin-top: 30px;
   display: flex;
   flex-basis: 100%;
-  justify-content: center;
+  justify-content: space-around;
   button {
     margin: 0;
   }
+}
+
+.activePlayer {
+  box-shadow: 0 0 20px 20px $green !important;
 }

@@ -30,7 +30,8 @@ var data = {
       fire: 7,
       flow: 9,
       fortitude: 30,
-      img: "kanye.jpg"
+      img: "kanye.jpg",
+      rally: 1
     },
     {
       name: "Jay-Z",
@@ -38,7 +39,8 @@ var data = {
       fire: 8,
       flow: 5,
       fortitude: 80,
-      img: "jayz.jpg"
+      img: "jayz.jpg",
+      rally: 1
     },
     {
       name: "Eminem",
@@ -46,7 +48,8 @@ var data = {
       fire: 6,
       flow: 9,
       fortitude: 60,
-      img: "eminem.jpg"
+      img: "eminem.jpg",
+      rally: 1
     },
     {
       name: "DMX",
@@ -54,7 +57,8 @@ var data = {
       fire: 10,
       flow: 5,
       fortitude: 70,
-      img: "DMX.jpg"
+      img: "DMX.jpg",
+      rally: 1
     },
     {
       name: "Dr. Dre",
@@ -62,7 +66,8 @@ var data = {
       fire: 8,
       flow: 5,
       fortitude: 90,
-      img: "drDre.jpg"
+      img: "drDre.jpg",
+      rally: 1
     },
     {
       name: "Snoop Dogg",
@@ -70,7 +75,8 @@ var data = {
       fire: 5,
       flow: 8,
       fortitude: 70,
-      img: "snoopDogg.jpg"
+      img: "snoopDogg.jpg",
+      rally: 1
     },
     {
       name: "Busta Rhymes",
@@ -78,7 +84,8 @@ var data = {
       fire: 8,
       flow: 10,
       fortitude: 70,
-      img: "bustaRhymes.jpg"
+      img: "bustaRhymes.jpg",
+      rally: 1
     },
     {
       name: "Ice Cube",
@@ -86,7 +93,8 @@ var data = {
       fire: 10,
       flow: 8,
       fortitude: 80,
-      img: "iceCube.jpg"
+      img: "iceCube.jpg",
+      rally: 1
     },
     {
       name: "Tupac",
@@ -94,7 +102,8 @@ var data = {
       fire: 7,
       flow: 9,
       fortitude: 80,
-      img: "Tupac.jpg"
+      img: "Tupac.jpg",
+      rally: 1
     },
     {
       name: "Easy-E",
@@ -102,7 +111,8 @@ var data = {
       fire: 8,
       flow: 7,
       fortitude: 90,
-      img: "easyE.jpg"
+      img: "easyE.jpg",
+      rally: 1
     }
   ],
   locations: [
