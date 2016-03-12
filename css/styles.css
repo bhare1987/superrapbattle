@@ -1,8 +1,9 @@
 /* line 1, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
 * {
-  font-family: "Play", sans-serif; }
+  font-family: "Play", sans-serif;
+  box-sizing: border-box; }
 
-/* line 5, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
+/* line 6, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
 body {
   width: 100%;
   background-image: url("../img/background.jpg");
@@ -11,7 +12,7 @@ body {
   background-position-x: -900px;
   background-position-y: -300px; }
 
-/* line 14, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
+/* line 15, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
 .background-overlay {
   position: fixed;
   width: 100%;
@@ -21,14 +22,14 @@ body {
   background-color: rgba(82, 83, 76, 0.25);
   z-index: -1; }
 
-/* line 24, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
+/* line 25, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
 header {
   display: flex;
   position: relative;
   justify-content: center;
   width: 100%;
   height: 150px; }
-  /* line 30, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
+  /* line 31, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
   header h1 {
     display: flex;
     justify-content: center;
@@ -40,12 +41,12 @@ header {
     color: #D3F819;
     width: 50%; }
 
-/* line 43, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
+/* line 44, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
 .mainContainer {
   width: 960px;
   margin: 0 auto; }
 
-/* line 48, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
+/* line 49, /Users/brandon.hare/tiy/week6/superrapbattle/css/_global.scss */
 .hide {
   display: none !important; }
 
@@ -179,3 +180,81 @@ header {
     margin-left: 0;
     color: white;
     font-size: 3em; }
+
+/* line 1, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+.battleground {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+/* line 7, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+.player1 {
+  display: flex;
+  flex-basis: 25%; }
+  /* line 10, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+  .player1 .character {
+    flex-direction: column;
+    flex-basis: 100%;
+    box-shadow: 0 0 20px 20px #D3F819; }
+    /* line 14, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+    .player1 .character h2 {
+      display: block;
+      width: 100%; }
+    /* line 18, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+    .player1 .character div {
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      width: 100%; }
+      /* line 23, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+      .player1 .character div img {
+        position: static; }
+    /* line 27, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+    .player1 .character:hover {
+      background-color: transparent;
+      cursor: default; }
+
+/* line 34, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+.player2 {
+  display: flex;
+  flex-basis: 25%; }
+  /* line 37, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+  .player2 .character {
+    flex-direction: column;
+    flex-basis: 100%;
+    box-shadow: 0 0 20px 20px #F7199E; }
+    /* line 41, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+    .player2 .character h2 {
+      display: block;
+      width: 100%; }
+    /* line 45, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+    .player2 .character div {
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      width: 100%; }
+      /* line 50, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+      .player2 .character div img {
+        position: static; }
+    /* line 54, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+    .player2 .character:hover {
+      background-color: transparent;
+      cursor: default; }
+
+/* line 61, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+.textContainer {
+  display: flex;
+  flex-basis: 46%;
+  background-color: #8D9274;
+  border: 3px solid #52534C;
+  padding: 10px;
+  color: white;
+  height: 500px;
+  overflow-y: scroll; }
+  /* line 70, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+  .textContainer .text-item {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    /* line 73, /Users/brandon.hare/tiy/week6/superrapbattle/css/_battleground.scss */
+    .textContainer .text-item i {
+      margin-right: 5px; }

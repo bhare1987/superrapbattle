@@ -13,5 +13,7 @@ var templates = {
       '</ul>',
     '</div>',
   ].join(""),
-
+  textItem: [
+    '<div class="text-item"><i class="fa fa-chevron-right"></i><%=content%></div>',
+  ].join('')
 }

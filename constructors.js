@@ -46,7 +46,6 @@ Rhymes.prototype = {
 };
 
 function Place(options){
-  var _this = this;
   var options = options || {};
   this.opponents = options.opponents;
   this.name = options.name;
@@ -55,11 +54,11 @@ function Place(options){
 Place.prototype = {
   constructor: Place,
   advantage: function() {
-    this.opponents.forEach(function(el){
-      if(el.hometown === _this.name){
+    this.opponents.forEach((function(el){
+      if(el.hometown === this.name){
         el.fire = el.fire * 2;
         el.fortitude = el.fortitude * 2;
       }
-    });
+    }).bind(this));
   }
 };

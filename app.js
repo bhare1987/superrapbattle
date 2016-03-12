@@ -81,6 +81,7 @@ var superRapBattle = {
   },
   addHeadlinersToDom: function(){
     superRapBattle.selectLocation();
+    superRapBattle.battleground.advantage();
     $('.opponent1').html(superRapBattle.buildTmpl('character', superRapBattle.player1[0]));
     $('.opponent2').html(superRapBattle.buildTmpl('character', superRapBattle.player2[0]));
     $('.locationContainer h2 span').html(superRapBattle.battleground.name);
@@ -89,10 +90,13 @@ var superRapBattle = {
   startGame: function() {
     $('.headliners').addClass('hide');
     $('.battleground').removeClass('hide');
-    superRapBattle.pushTextToContainer("Welcome to the fight y'all! Today's contestants are: " + superRapBattle.player1[0].name + " and " + superRapBattle.player2[0].name + ".", '.textContainer');
+    superRapBattle.pushTextToContainer({content: "Welcome to the fight y'all! Today's contestants are: " + superRapBattle.player1[0].name + " and " + superRapBattle.player2[0].name + "."}, '.textContainer', 'textItem');
+    $('.player1').html(superRapBattle.buildTmpl('character', superRapBattle.player1[0]));
+    $('.player2').html(superRapBattle.buildTmpl('character', superRapBattle.player2[0]));
   },
-  pushTextToContainer: function(str, container){
-    $(container).append(str);
+  pushTextToContainer: function(data, container, tmplName){
+    var output = superRapBattle.buildTmpl(tmplName, data);
+    $(container).append(output);
   }
 }
 
