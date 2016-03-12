@@ -92,7 +92,9 @@ var superRapBattle = {
     $('.battleground').removeClass('hide');
     superRapBattle.pushTextToContainer({content: "Welcome to the fight y'all! Today's contestants are: " + superRapBattle.player1[0].name + " and " + superRapBattle.player2[0].name + "."}, '.textContainer', 'textItem');
     $('.player1').html(superRapBattle.buildTmpl('character', superRapBattle.player1[0]));
+    superRapBattle.pushTextToContainer({name: "Player1"}, '.player1', 'gameButtons');
     $('.player2').html(superRapBattle.buildTmpl('character', superRapBattle.player2[0]));
+    superRapBattle.pushTextToContainer({name: "Player2"}, '.player2', 'gameButtons');
   },
   pushTextToContainer: function(data, container, tmplName){
     var output = superRapBattle.buildTmpl(tmplName, data);
@@ -137,3 +139,5 @@ function startGame() {
 $(document).ready(function(){
   superRapBattle.init();
 })
+
+//ideas for powerups Rally the Crowd and get health back

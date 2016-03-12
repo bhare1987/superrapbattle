@@ -49,3 +49,17 @@ header {
 .hide {
   display: none !important;
 }
+
+button {
+  height: 34px;
+  margin: auto;
+  background-color: $brown;
+  border: 2px solid $gray;
+  border-radius: 3px;
+  padding: 5px;
+  color: white;
+  &:hover {
+    color: $gray;
+    box-shadow: 0 0 5px 5px $green;
+  }
+}

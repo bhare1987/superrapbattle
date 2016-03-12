@@ -15,5 +15,8 @@ var templates = {
   ].join(""),
   textItem: [
     '<div class="text-item"><i class="fa fa-chevron-right"></i><%=content%></div>',
-  ].join('')
+  ].join(''),
+  gameButtons: [
+    '<div class="gameButtons"><button data="<%=name%>">Spit that Fire</button></div>'
+  ].join("")
 }

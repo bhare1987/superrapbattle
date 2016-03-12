@@ -7,10 +7,13 @@
 .player1 {
   display: flex;
   flex-basis: 25%;
+  flex-flow: column;
   .character {
     flex-direction: column;
     flex-basis: 100%;
     box-shadow: 0 0 20px 20px $brightGreen;
+    height: 400px;
+    background-color: rgba(0,0,0,.6);
     h2 {
       display: block;
       width: 100%;
@@ -34,10 +37,13 @@
 .player2 {
   display: flex;
   flex-basis: 25%;
+  flex-flow: column;
   .character {
     flex-direction: column;
     flex-basis: 100%;
     box-shadow: 0 0 20px 20px $pink;
+    height: 400px;
+    background-color: rgba(0,0,0,.6);
     h2 {
       display: block;
       width: 100%;
@@ -73,5 +79,15 @@
     i {
       margin-right: 5px;
     }
+  }
+}
+
+.gameButtons {
+  margin-top: 30px;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  button {
+    margin: 0;
   }
 }

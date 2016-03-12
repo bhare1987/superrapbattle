@@ -21,6 +21,7 @@
   & > .character {
     box-shadow: 0 0 20px 20px $brightGreen;
     flex-basis: 100%;
+    background-color: rgba(0,0,0,.6);
     &:hover {
       background-color: transparent;
       cursor: default;
@@ -35,6 +36,7 @@
   & > .character {
     box-shadow: 0 0 20px 20px $pink;
     flex-basis: 100%;
+    background-color: rgba(0,0,0,.6);
     &:hover {
       background-color: transparent;
       cursor: default;
