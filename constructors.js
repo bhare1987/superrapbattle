@@ -35,7 +35,7 @@ Rapper.prototype = {
   },
   rallyCrowd: function() {
     if (this.rally) {
-      this.fortitude = this.fortitude + (Math.floor(this.fortitude * 0.2));
+      this.fortitude = (this.fortitude + Math.floor(this.fortitude * 0.25));
       this.rally--;
       superRapBattle.pushTextToContainer({content: "You rallied the crowd and regained some fortitude."}, '.textContainer', 'textItem');
       var selector = '.' + this.player;
@@ -53,14 +53,17 @@ function Rhymes(options){
   this.style = options.style || "fresh";
   this.rhymes = options.rhymes || data.rhymes;
   this.damage = Math.floor(Math.random() * 5 + 1);
+  this.unused = _.shuffle(this.rhymes);
 };
 
 Rhymes.prototype = {
   constructor: Rhymes,
   rhyme: function() {
-    return {
-      content: this.rhymes[Math.floor(Math.random() * this.rhymes.length)]
+    if(this.unused.length === 0) {
+      this.unused = _.shuffle(this.rhymes);
     }
+    var rhymeContent = this.unused.splice(Math.floor(Math.random() * this.unused.length), 1);
+    return rhymeContent[0];
   },
 };
 

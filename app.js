@@ -162,40 +162,6 @@ var superRapBattle = {
   }
 }
 
-function startGame() {
-  var charStr = "";
-  characterSelect.forEach(function(el, idx, arr){
-    if(arr.length === (idx - 1)) {
-      charStr += ("and " + el.name + ".");
-    } else {
-    charStr += (el.name + ", ");
-    }
-  });
-  console.log("Welcome to the fight y'all! Today's contestants are: " + charStr);
-  var player1Rapper = prompt("Player 1, select your character.");
-  var player2Rapper = prompt("Player 2, select your character.");
-  var location = prompt("Enter your battleground!");
-  player1 = new Rapper(characterSelect.filter(function(el){
-    return el.name === player1Rapper;
-  })[0])
-  player2 = new Rapper(characterSelect.filter(function(el){
-    return el.name === player2Rapper;
-  })[0])
-  battleground = new Place({
-    opponents: [player1, player2],
-    name: location
-  })
-  battleground.advantage();
-  player1.buildArsenal({
-   style: "Wu Tang",
-   rhymes: chooseRhymeSet(player1)
-  });
-  player2.buildArsenal({
-   style: "Shaolin",
-   rhymes: chooseRhymeSet(player2)
-  });
-}
-
 $(document).ready(function(){
   superRapBattle.init();
 })
