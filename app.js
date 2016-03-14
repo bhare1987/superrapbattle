@@ -13,7 +13,6 @@ var superRapBattle = {
     $('.battleground').on('click', 'button[name="spit"]', superRapBattle.spit);
     $('.battleground').on('click', 'button[name="rally"]', superRapBattle.rally);
     $('header').on('click', 'button[name="restart"]', superRapBattle.restart);
-
   },
   selectCharacter: function(event){
     var _this = $(this);
@@ -63,22 +62,24 @@ var superRapBattle = {
     if($(this).data('player') === superRapBattle.activePlayer){
       if(superRapBattle.player1.player === superRapBattle.activePlayer){
         superRapBattle.player1.spit(superRapBattle.player2);
+        superRapBattle.setActivePlayer();
       } else {
         superRapBattle.player2.spit(superRapBattle.player1);
+        superRapBattle.setActivePlayer();
       }
     }
-    superRapBattle.setActivePlayer();
   },
   rally: function(event){
     event.preventDefault();
     if($(this).data('player') === superRapBattle.activePlayer){
       if(superRapBattle.player1.player === superRapBattle.activePlayer){
         superRapBattle.player1.rallyCrowd();
+        superRapBattle.setActivePlayer();
       } else {
         superRapBattle.player2.rallyCrowd();
+        superRapBattle.setActivePlayer();
       }
     }
-    superRapBattle.setActivePlayer();
   },
   config: {
     player1: undefined,
